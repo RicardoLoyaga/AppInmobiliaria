@@ -84,6 +84,15 @@
                 </Grid>
                 
             </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image x:Name="Foto" />
+                <Button x:Name="TomarFoto" Grid.Row="1" Text="Tomar Foto"
+                        BackgroundColor="#7d332c" CornerRadius="15" Clicked="TomarFoto_Clicked"/>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

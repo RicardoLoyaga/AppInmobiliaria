@@ -10,7 +10,7 @@ namespace AppInmobiliaria.App
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Propiedad());
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

@@ -15,6 +15,17 @@ namespace AppInmobiliaria.App
         public DetallePropiedad()
         {
             InitializeComponent();
+            //TomarFoto.Clicked += TomarFoto_Clicked;
+        }
+
+        private async void TomarFoto_Clicked(object sender, EventArgs e)
+        {
+            var photo = await Plugin.Media.CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions());
+
+            if(photo != null)
+            {
+                Foto.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
+            }
         }
     }
 }
