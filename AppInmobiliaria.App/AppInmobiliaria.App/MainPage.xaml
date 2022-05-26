@@ -8,8 +8,9 @@
         <Label Text="Usuario"/>
         <Entry x:Name="txtUsuario" />
         <Label Text="Contraseña"/>
-        <Entry x:Name="txtContrasena" />
-        <Button x:Name="btnIniciarSesion" Text="Iniciar Sesión" BackgroundColor="#7d332c" TextColor="White" CornerRadius="15" />
+        <Entry x:Name="txtContrasena" IsPassword="True"/>
+        <Button x:Name="btnIniciarSesion" Text="Iniciar Sesión" Clicked="btnIniciarSesion_Clicked"
+                BackgroundColor="#7d332c" TextColor="White" CornerRadius="15" />
     </StackLayout>
 
 </ContentPage>

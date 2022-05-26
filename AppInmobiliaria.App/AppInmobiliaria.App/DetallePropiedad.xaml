@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppInmobiliaria.App.DetallePropiedad"
+             Title="Detalle Propiedad">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" 
+                                       Source="casa.jpg"
+                                       WidthRequest="150"/>
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="0"
+                                           Grid.Row="0"
+                                           FontAttributes="Bold"
+                                           Text="Ubicación"/>
+                    <Label Grid.Column="1"
+                                           Grid.Row="0"
+                                           Text="PICHINCHA-QUITO"/>
+
+                    <Label Grid.Column="0"
+                                           Grid.Row="1"
+                                           FontAttributes="Bold"
+                                           Text="Dirección"/>
+                    <Label Grid.Column="1"
+                                           Grid.Row="1"
+                                           Text="AV. LA PRENSA"/>
+
+                    <Label Grid.Column="0"
+                                           Grid.Row="2"
+                                           FontAttributes="Bold"
+                                           Text="Precio"/>
+                    <Label Grid.Column="1"
+                                           Grid.Row="2"
+                                           Text="58000"/>
+
+                    <Label Grid.Column="0"
+                                           Grid.Row="3"
+                                           FontAttributes="Bold"
+                                           Text="Tipo Propiedad"/>
+                    <Label Grid.Column="1"
+                                           Grid.Row="3"
+                                           Text="CASA"/>
+
+                    <Label Grid.Column="0"
+                                           Grid.Row="4"
+                                           FontAttributes="Bold"
+                                           Text="Habitaciones"/>
+                    <Label Grid.Column="1"
+                                           Grid.Row="4"
+                                           Text="4"/>
+
+                    <Label Grid.Column="0"
+                                           Grid.Row="5"
+                                           FontAttributes="Bold"
+                                           Text="Baños"/>
+                    <Label Grid.Column="1"
+                                           Grid.Row="5"
+                                           Text="2"/>
+
+                    <Label Grid.Column="0"
+                                           Grid.Row="6"
+                                           FontAttributes="Bold"
+                                           Text="Parqueaderos"/>
+                    <Label Grid.Column="1"
+                                           Grid.Row="6"
+                                           Text="1"/>
+                </Grid>
+                
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

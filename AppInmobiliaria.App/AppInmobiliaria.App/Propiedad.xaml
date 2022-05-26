@@ -1,85 +1,122 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppInmobiliaria.App.Propiedad">
+             x:Class="AppInmobiliaria.App.Propiedad"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
-            <ListView HasUnevenRows="True"
-                      SeparatorVisibility="None">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Frame CornerRadius="10"
-                                   Margin="0,0,0,5">
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Image Grid.Column="0" 
-                                       Source="{Binding image}"
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image Grid.ColumnSpan="2" Grid.Row="0"
+                                       Source="casa.jpg"
                                        WidthRequest="150"/>
-                                    <Grid Grid.Column="1">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="*"/>
-                                        </Grid.ColumnDefinitions>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="Auto"/>
-                                        </Grid.RowDefinitions>
-                                        <Label Grid.Column="0"
-                                           Grid.Row="0"
+                <Label Grid.Column="0" Grid.Row="1"
+                                           
                                            FontAttributes="Bold"
                                            Text="Ubicación"/>
-                                        <Label Grid.Column="1"
-                                           Grid.Row="0"
-                                           Text="{Binding Ubicacion}"/>
-
-                                        <Label Grid.Column="0"
+                    
+                                            <Label Grid.Column="1"
                                            Grid.Row="1"
-                                           FontAttributes="Bold"
-                                           Text="Dirección"/>
-                                        <Label Grid.Column="1"
-                                           Grid.Row="1"
-                                           Text="{Binding Direccion}"/>
+                                           Text="PICHINCHA-QUITO"/>
 
-                                        <Label Grid.Column="0"
+                                            <Label Grid.Column="0"
                                            Grid.Row="2"
                                            FontAttributes="Bold"
-                                           Text="Precio"/>
-                                        <Label Grid.Column="1"
+                                           Text="Propietario"/>
+                    
+                                            <Label Grid.Column="1"
                                            Grid.Row="2"
-                                           Text="{Binding Precio, StringFormat='{0:C2}'}"/>
-
-                                        <Label Grid.Column="0"
+                                           Text="JUAN PEREZ"/>
+                
+                <Label Grid.Column="0"
                                            Grid.Row="3"
                                            FontAttributes="Bold"
-                                           Text="Tipo Propiedad"/>
-                                        <Label Grid.Column="1"
-                                           Grid.Row="3"
-                                           Text="{Binding TipoPropiedad}"/>
+                                           Text="Metros cuadrados"/>
 
-                                        <Label Grid.Column="0"
+                <Label Grid.Column="1"
+                                           Grid.Row="3"
+                                           Text="72"/>
+
+                <Label Grid.Column="0"
                                            Grid.Row="4"
+                                           FontAttributes="Bold"
+                                           Text="Valor"/>
+
+                <Label Grid.Column="1"
+                                           Grid.Row="4"
+                                           Text="58000"/>
+                <Button ImageSource="ic_more_vert" x:Name="btnDetalle" Clicked="btnDetalle_Clicked"
+                        Grid.Column="2" Grid.Row="0"/>
+
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image Grid.ColumnSpan="2" Grid.Row="0"
+                                       Source="casa2.jpg"
+                                       WidthRequest="150"/>
+                <Label Grid.Column="0" Grid.Row="1"
                                            FontAttributes="Bold"
                                            Text="Ubicación"/>
-                                        <Label Grid.Column="1"
+
+                <Label Grid.Column="1"
+                                           Grid.Row="1"
+                                           Text="PICHINCHA-VALLE"/>
+
+                <Label Grid.Column="0"
+                                           Grid.Row="2"
+                                           FontAttributes="Bold"
+                                           Text="Propietario"/>
+
+                <Label Grid.Column="1"
+                                           Grid.Row="2"
+                                           Text="DANIEL INTRIAGO"/>
+
+                <Label Grid.Column="0"
+                                           Grid.Row="3"
+                                           FontAttributes="Bold"
+                                           Text="Metros cuadrados"/>
+
+                <Label Grid.Column="1"
+                                           Grid.Row="3"
+                                           Text="45"/>
+
+                <Label Grid.Column="0"
                                            Grid.Row="4"
-                                           Text="{Binding Ubicacion}"/>
-                                    </Grid>
-                                    <Image Grid.Column="2"
-                                       Source="ic_more_vert.png"/>
-                                </Grid>
-                            </Frame>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                                           FontAttributes="Bold"
+                                           Text="Valor"/>
+
+                <Label Grid.Column="1"
+                                           Grid.Row="4"
+                                           Text="20000"/>
+
+                <Button ImageSource="ic_more_vert" x:Name="btnDetalle2" Clicked="btnDetalle2_Clicked"
+                        Grid.Column="2" Grid.Row="0"/>
+
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
